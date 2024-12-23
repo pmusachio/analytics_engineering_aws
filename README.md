@@ -36,15 +36,28 @@ The main focus is on creating ETL with AWS Glue, starting from data ingestion wi
   external_files --- s3_bronze
 ```
 
+```External Files``` represents raw data </br>
+```Security Layer``` "IAM" service to create an auxiliary user that will insert Data into the Lake </br>
+```Bucket S3 -> Bronze layer``` to store raw data </br>
+
+```Glue Crawler``` extract informations from ```Bucket S3``` and creation of table W/ ```Glue Data Catalog``` </br>
+```Glue Data Catalog``` storing table informations </br>
+```Glue Data Quality``` quality of informations </br>
+```Athena``` data query </br>
+```Glue ETL job``` ETL creation and information processing </br>
+```Bucket S3 -> Silver layer``` to store processed data </br>
 
 
 
-- **Camada Bronze:** Armazena os dados brutos, como foram recebidos
-  - `vendas_zoop_bronze.parquet`
-  - `estoques_zoop_bronze.parquet`
-  - `redes_sociais_zoop_bronze.parquet`
 
-- **Camada Silver:** Contém os dados tratados conforme as requisições passadas pelo Head de Dados.
+
+
+
+
+
+
+
+
 
 
 
